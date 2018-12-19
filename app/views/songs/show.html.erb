@@ -1,0 +1,4 @@
+<%= @song.title + ' - ' + @song.artist_name %>
+<%= button_to "Edit", edit_song_path(@song) %>
+<br>
+<%= link_to 'Delete', songs_path, method: :delete %>

@@ -1,0 +1,8 @@
+<h1> All Songs </h1>
+
+<%= link_to "Add New Song", new_song_path %>
+<br>
+<%  @songs.each do |song|%>
+<%= song.artist_name + ' - ' + song.title %>
+<%= button_to "Edit", edit_song_path(song), method: "get" %>
+<% end %>
