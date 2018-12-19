@@ -1,0 +1,7 @@
+<h1>Edit <%= @song.title %></h1>
+<h2>Artist: <%= @song.artist_name %></h2>
+
+<%= render 'form' %><br>
+
+<%= button_to('Delete', @song,
+    method: "delete", remote: true, data: { confirm: 'Are you sure?'}) %>

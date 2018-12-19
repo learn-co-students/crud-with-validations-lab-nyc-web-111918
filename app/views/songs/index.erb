@@ -1,0 +1,28 @@
+<h1>Song Index</h1>
+
+<div class="link">
+  <%= link_to 'New Song', new_song_path %><br><br>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist Name</th>
+      <th>Release Year</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+      <td><%= song.artist_name %></td>
+      <td><%= song.release_year %></td>
+      <td><%= song.genre %></td>
+      <td><%= link_to "Edit", "songs/#{song.id}/edit" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
